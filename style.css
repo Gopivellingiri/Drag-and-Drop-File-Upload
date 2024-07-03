@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #EFF4FA;
+}
+
+.drag_area {
+    position: relative;
+    border: 2px dashed #FF6F61;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: none;
+
+}
+.drag_area .click_close {
+    display: none;
+    z-index: 50;
+    position: absolute;
+    color: #888;
+    top: 0px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .drag_area .click_close.active{
+    opacity: 0;
+  }
+
+  .drag_area:hover .click_close.active{
+    display: block;
+    opacity: 1;
+  }
+
+
+
+
+  .drag_area .click_close:hover {
+    color: #FF6F61;
+  }
+
+.drag_area.active {
+    border: 2px solid #FF6F61;
+}
+
+.drag_area .icon {
+    font-size: 100px;
+    color: #FF6F61;
+}
+
+.drag_area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #FF6F61;
+}
+
+.drag_area span {
+    font-size: 25px;
+    font-weight: 600;
+    color: #FF6F61;
+    margin: 10px 0 15px 0;
+}
+
+.drag_area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #FF6F61;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag_area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.popup {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /
+  }
+  
+  .popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px; 
+  }
+
+  .popup-content p {
+    font-size: 18px;
+    font-weight: 600;
+
+  }
+  
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: #FF6F61;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
